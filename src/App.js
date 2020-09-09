@@ -20,7 +20,7 @@ import FourTowar from './img/4.png';
 
 const FOOD_AREAS = [{
 	id: 'pizikiva-gallery',
-	name: 'Антонета хер соси',
+	name: 'hekronhbeop;irtgnikorelbanaolik',
 	items: [{
 		id: 'kfc',
 		name: 'KFC',
