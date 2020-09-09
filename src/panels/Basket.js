@@ -113,7 +113,6 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
               if (faster) {
                 setFaster(false);
               } else {
-                setTime('');
                 setFaster(true);
               }
             }}
@@ -121,7 +120,7 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
         </div>
         <div className="Place__choice-item">
           <span>Назначить</span>
-          <input
+          <input type="time"
             value={time}
             onFocus={() => {
               setFaster(false);
@@ -146,11 +145,17 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
           <Checkbox checked={!selfService} onToggle={() => setSelfService(!setSelfService)} />
         </div>
       </div>
-            <footer className="Place__footer">
-            <Link to={`/order/${area.id}/${item.id}`} className="Place__order">
-            Оплатить {price}
+        <footer className="Place__footer">
+
+            <Link to={`/order/${area.id}/${item.id}`}
+                  className="Place__order"
+                  onClick={(price) => {
+                      alert("123")
+                  }}>
+                Оплатить {price}
             </Link>
-            </footer>
+
+        </footer>
     </div>
   );
 };

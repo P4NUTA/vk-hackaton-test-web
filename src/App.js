@@ -20,7 +20,7 @@ import FourTowar from './img/4.png';
 
 const FOOD_AREAS = [{
 	id: 'pizikiva-gallery',
-	name: 'ТРЦ "Им.Пыжикова"',
+	name: 'Антонета хер соси',
 	items: [{
 		id: 'kfc',
 		name: 'KFC',
@@ -33,7 +33,7 @@ const FOOD_AREAS = [{
 			name: 'Классик',
 			price: 150,
 		}, {
-			id: 'bigmac',
+			id: 'bulba',
 			image: OneTowar,
 			name: 'Картофель фри',
 			price: 50,
@@ -158,7 +158,7 @@ const App = () => {
 					path="/orders"
 					exact
 				>
-					<Orders 
+					<Orders
 						order={order}
 						orderStatuses={orderStatuses}
 						foodAreas={FOOD_AREAS}
@@ -180,7 +180,7 @@ const App = () => {
 						}}
 					/>
 				</Route>
-				<Route 
+				<Route
 					path="/place/:area/:place"
 					render={routeProps => {
 						return (
@@ -218,7 +218,7 @@ const App = () => {
 									}
 
 									const serialized = JSON.stringify(updatedOrder);
-									
+
 									localStorage.setItem('orders', serialized);
 									localStorage.setItem('orderStatuses', JSON.stringify(nextOrderStatuses));
 
@@ -253,7 +253,7 @@ const App = () => {
 									}
 
 									const serialized = JSON.stringify(updatedOrder);
-									
+
 									localStorage.setItem('orders', serialized);
 									localStorage.setItem('orderStatuses', JSON.stringify(nextOrderStatuses));
 
